@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/SwethaaSundar/Events_app/static/css/main.073c9b0a.css",
-    "main.js": "/SwethaaSundar/Events_app/static/js/main.aec5dbe0.js",
-    "static/js/787.e35e4666.chunk.js": "/SwethaaSundar/Events_app/static/js/787.e35e4666.chunk.js",
-    "service-worker.js": "/SwethaaSundar/Events_app/service-worker.js",
-    "static/media/logo.svg": "/SwethaaSundar/Events_app/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
-    "index.html": "/SwethaaSundar/Events_app/index.html",
-    "main.073c9b0a.css.map": "/SwethaaSundar/Events_app/static/css/main.073c9b0a.css.map",
-    "main.aec5dbe0.js.map": "/SwethaaSundar/Events_app/static/js/main.aec5dbe0.js.map",
-    "787.e35e4666.chunk.js.map": "/SwethaaSundar/Events_app/static/js/787.e35e4666.chunk.js.map"
+    "main.css": "/Events_app/static/css/main.073c9b0a.css",
+    "main.js": "/Events_app/static/js/main.ce9e5b86.js",
+    "static/js/787.e35e4666.chunk.js": "/Events_app/static/js/787.e35e4666.chunk.js",
+    "service-worker.js": "/Events_app/service-worker.js",
+    "static/media/logo.svg": "/Events_app/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/Events_app/index.html",
+    "main.073c9b0a.css.map": "/Events_app/static/css/main.073c9b0a.css.map",
+    "main.ce9e5b86.js.map": "/Events_app/static/js/main.ce9e5b86.js.map",
+    "787.e35e4666.chunk.js.map": "/Events_app/static/js/787.e35e4666.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.aec5dbe0.js"
+    "static/js/main.ce9e5b86.js"
   ]
 }
