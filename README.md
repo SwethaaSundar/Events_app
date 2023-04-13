@@ -1,5 +1,16 @@
 # Events_app
-## Ex-4.1
+## Frontend:
+JavaScript/React,<br/>
+hosted on Github Pages
+
+## Backend:
+Node/Express and Lambda finctions (FaaS), <br/>
+hosted on AWS
+
+## Backend (Database):
+Google Calendar API
+
+# Ex-4.1
 Feature 1: Filter Events by City.<br/>
 User story: As a User, I would like to filter the city and see the current and upcoming events in that particular city.<br/>
 Scenario 1: When user hasn’t searched for a city, show upcoming events from all cities.<br/>
@@ -65,3 +76,10 @@ Scenario 1: Show a chart with the number of upcoming events in each city.<br/>
 Given: Events app is loaded with the upcoming events.<br/>
 When: User clicks a button “Event chart”.<br/>
 Then: App will show graphical representation of all the upcoming events from all cities or a particular city.
+
+# Ex-4.2
+## Use of Serverless functions:
+User logs into the app, a serverless function can be triggered to authenticate their credentials and generate an access token in an authorization server. This function can be hosted on AWS Lambda(Cloud platform) <br/>
+Built-in services make it easy to develop and deploy your app, so you don’t need to implement it from scratch.<br/>
+the pricing model of serverless services is somewhat interesting. The cost is execution-based, meaning that you’re charged for the execution time, unlike the 24/7 server maintaining cost of traditional architectures.
+
