@@ -30,7 +30,7 @@
 
       <h4>Step 2: Get your code and exchange for an access token</h4>
       <p>
-        After you’re redirected back to your Meet app on GitHub, copy the code
+        After youre redirected back to your Meet app on GitHub, copy the code
         from the URI.
       </p>
       <br />
@@ -53,7 +53,8 @@
       const resultElement = document.getElementById("result");
       const resultLink = document.getElementById("authURL");
       // Replace this with your own endpoint
-      const getAuthURL = `https://2vdt6v80e9.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url`;
+      const getAuthURL =
+        "https://2vdt6v80e9.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url";
 
       getURLElement.onclick = function () {
         fetch(getAuthURL)
@@ -75,12 +76,12 @@
       const codeValue = document.getElementById("code");
       const getAccessToken = document.getElementById("getToken");
       const accessTokenElement = document.getElementById("accessToken");
-      const getToken = `https://2vdt6v80e9.execute-api.eu-central-1.amazonaws.com/dev/api/token`;
+      const getToken =
+        "https://2vdt6v80e9.execute-api.eu-central-1.amazonaws.com/dev/api/token";
 
       getAccessToken.onclick = function () {
         let code = codeValue.value;
 
-        // if the authorization code is not URL-encoded, then URL-encode it.
         if (decodeURIComponent(code) === code) {
           code = encodeURIComponent(codeValue.value);
         }
@@ -90,14 +91,15 @@
             return response.json();
           })
           .then(function (json) {
-            return (accessTokenElement.innerText = JSON.stringify(json));
+            accessTokenElement.innerText = JSON.stringify(json);
           });
       };
       // --------------------- END OF STEP 2
       // -- STEP 3
       const getEvents = document.getElementById("getEvents");
       const events = document.getElementById("events");
-      const getCalendarEvents = `https://2vdt6v80e9.execute-api.eu-central-1.amazonaws.com/dev/api/get-events`;
+      const getCalendarEvents =
+        "https://2vdt6v80e9.execute-api.eu-central-1.amazonaws.com/dev/api/get-events";
 
       getEvents.onclick = function () {
         const { access_token } = JSON.parse(accessTokenElement.innerText);
