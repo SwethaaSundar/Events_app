@@ -32,18 +32,34 @@ describe("<Event /> component", () => {
     expect(eventLocation.text()).toBe(`Location: ${eventLocationString}`);
   });
 
-  // test 8: renders expanded view
-  test("event details is expanded and rendered correctly", () => {
-    expect(EventWrapper.find("h3.about")).toHaveLength(0);
-    expect(EventWrapper.find("a.link")).toHaveLength(0);
-    expect(EventWrapper.find("p.description")).toHaveLength(0);
+  // test("event details is expanded and rendered correctly", () => {
+  //   expect(EventWrapper.find("h3.about")).toHaveLength(0);
+  //   expect(EventWrapper.find("a.link")).toHaveLength(0);
+  //   expect(EventWrapper.find("p.description")).toHaveLength(0);
+  // });
+
+  // test("user can collapse an event when clicking hide details button", () => {
+  //   const detailsButton = EventWrapper.find("button.details-btn");
+  //   expect(detailsButton.text()).toBe("Show details");
+  //   detailsButton.simulate("click");
+  //   expect(EventWrapper.state("collapsed")).toBe(false);
+  // });
+  test('details is initially collapsed, children hidden, details-btn text is "shown details', () => {
+    const detailsButton = EventWrapper.find(".details-btn");
+    expect(EventWrapper.state("collapsed")).toBe(true);
+    expect(detailsButton).toBeDefined();
+    expect(detailsButton.text()).toBe("Show details");
+    expect(EventWrapper.find(".about")).toHaveLength(0);
+    expect(EventWrapper.find(".link")).toHaveLength(0);
+    expect(EventWrapper.find(".description")).toHaveLength(0);
   });
 
-  // test 9: user can not view event details when clicking button
-  test("user can collapse an event when clicking hide details button", () => {
-    const detailsButton = EventWrapper.find("button.details-btn");
-    expect(detailsButton.text()).toBe("Show details");
+  test("details is expanded (collapsed=false) on click", () => {
+    const detailsButton = EventWrapper.find(".details-btn");
     detailsButton.simulate("click");
+    expect(EventWrapper.find(".about")).toHaveLength(1);
+    expect(EventWrapper.find(".link")).toHaveLength(1);
+    expect(EventWrapper.find(".description")).toHaveLength(1);
     expect(EventWrapper.state("collapsed")).toBe(false);
   });
 });

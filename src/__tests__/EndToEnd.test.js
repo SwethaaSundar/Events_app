@@ -9,7 +9,7 @@ describe("show/hide an event details", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
       headless: false,
-      slowMo: 250, // slow actions by 250ms
+      // slowMo: 250, // slow actions by 250ms
       ignoreDefaultArgs: ["--disable-extensions"], // ignores default settings
     });
 
