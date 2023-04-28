@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Event extends Component {
   state = {
-    collapse: true,
+    collapsed: true,
   };
   toggleDetails = () => {
     this.setState((prevState) => ({
@@ -15,7 +15,7 @@ class Event extends Component {
     const { collapsed } = this.state;
     return (
       <div className="event">
-        <h2 className="summary">{`Details: ${event.summary}`}</h2>
+        <h2 className="summary">{`Event: ${event.summary}`}</h2>
         <p className="event-start">
           {`Start date: ${new Date(event.start.dateTime).toISOString()}`}
         </p>

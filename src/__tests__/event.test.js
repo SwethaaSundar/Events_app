@@ -14,7 +14,7 @@ describe("<Event /> component", () => {
     const summary = EventWrapper.find("h2");
     const summaryString = event.summary;
     expect(summary).toBeDefined();
-    expect(summary.text()).toBe(`Details: ${summaryString}`);
+    expect(summary.text()).toBe(`Event: ${summaryString}`);
   });
 
   test("render start time correctly", () => {
@@ -34,16 +34,16 @@ describe("<Event /> component", () => {
 
   // test 8: renders expanded view
   test("event details is expanded and rendered correctly", () => {
-    expect(EventWrapper.find("h3.about")).toHaveLength(1);
-    expect(EventWrapper.find("a.link")).toHaveLength(1);
-    expect(EventWrapper.find("p.description")).toHaveLength(1);
+    expect(EventWrapper.find("h3.about")).toHaveLength(0);
+    expect(EventWrapper.find("a.link")).toHaveLength(0);
+    expect(EventWrapper.find("p.description")).toHaveLength(0);
   });
 
   // test 9: user can not view event details when clicking button
   test("user can collapse an event when clicking hide details button", () => {
     const detailsButton = EventWrapper.find("button.details-btn");
-    expect(detailsButton.text()).toBe("Hide details");
+    expect(detailsButton.text()).toBe("Show details");
     detailsButton.simulate("click");
-    expect(EventWrapper.state("collapsed")).toBe(true);
+    expect(EventWrapper.state("collapsed")).toBe(false);
   });
 });
