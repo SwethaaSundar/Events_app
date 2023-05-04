@@ -5,6 +5,7 @@ import CitySearch from "./CitySearch";
 import NumberOfEvents from "./NumberOfEvents";
 import { getEvents, extractLocations, getAccessToken, checkToken } from "./api";
 import WelcomeScreen from "./WelcomeScreen";
+import { WarningAlert } from "./Alert";
 
 class App extends Component {
   state = {
@@ -12,6 +13,7 @@ class App extends Component {
     locations: [],
     selectedLocation: "all",
     numberOfEvents: 32,
+    warningText: "",
     showWelcomeScreen: undefined,
   };
   async componentDidMount() {
@@ -36,6 +38,17 @@ class App extends Component {
   componentWillUnmount() {
     this.mounted = false;
   }
+  offlineWarning = () => {
+    if (!navigator.onLine) {
+      this.setState({
+        warningText: "You seem to be offline; events were pulled from cache.",
+      });
+    } else {
+      this.setState({
+        warningText: "",
+      });
+    }
+  };
 
   updateNumberOfEvents(number) {
     this.setState({
@@ -64,6 +77,7 @@ class App extends Component {
       return <div className="App" />;
     return (
       <div className="App">
+        <WarningAlert text={this.state.offlineWarning} />
         <h1> Events App </h1>
         <h4> Choose a city to see their events </h4>
         <CitySearch
