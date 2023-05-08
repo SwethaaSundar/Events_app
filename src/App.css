@@ -200,7 +200,7 @@ input[type="number"] {
   font-family: "Roboto";
 }
 
-@media only screen and (min-width: 992px) {
+/* @media only screen and (min-width: 992px) {
   .data-vis-wrapper {
     flex-direction: row;
   }
@@ -210,4 +210,20 @@ input[type="number"] {
     min-width: auto;
     margin: 0 auto;
   }
+} */
+
+.data-vis-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.scatter {
+  flex-grow: 1;
+  max-width: 1000px;
+}
+
+.pie {
+  max-width: 600px;
 }
