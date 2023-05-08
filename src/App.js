@@ -15,6 +15,7 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
+import EventGenre from "./EventGenre";
 
 class App extends Component {
   state = {
@@ -110,7 +111,8 @@ class App extends Component {
           updateEvents={this.updateEvents}
         />
         <h1> Events App </h1>
-        <div>
+        <div className="data-vis-wrapper">
+          <EventGenre events={this.state.events} />
           <ResponsiveContainer height={400}>
             <ScatterChart
               // width={400}
